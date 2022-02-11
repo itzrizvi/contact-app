@@ -1,7 +1,7 @@
 {
   "name": "contacts-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Contact App",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -12,6 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
-    "morgan": "^1.10.0"
-  }
+    "morgan": "^1.10.0",
+    "node-modules": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzrizvi/contact-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itzrizvi/contact-app/issues"
+  },
+  "homepage": "https://github.com/itzrizvi/contact-app#readme"
 }
