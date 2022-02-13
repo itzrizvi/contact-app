@@ -20,5 +20,16 @@ class Contacts {
     updateContactById(id, updatedContact) {
         let index = this.contacts.findIndex(contact => contact.id === id);
 
+        this.contacts[index].name = updatedContact.name || this.contacts[index].name;
+        this.contacts[index].phone = updatedContact.phone || this.contacts[index].phone;
+        this.contacts[index].email = updatedContact.email || this.contacts[index].email;
+
+        return this.contacts[index];
+    }
+
+
+    deleteContactById(id) {
+        let index = this.contacts.findIndex(contact => contact.id === id);
+
     }
 }
