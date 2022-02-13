@@ -30,6 +30,11 @@ class Contacts {
 
     deleteContactById(id) {
         let index = this.contacts.findIndex(contact => contact.id === id);
-
+        let deletedObject = this.contacts[index];
+        this.contacts = this.contacts.filter(contact => contact.id === id);
+        return deletedObject;
     }
 }
+
+exports.contacts = new Contacts();
+
