@@ -3,13 +3,15 @@ const {
     getAllContacts,
     createContact,
     getContactsbyId,
-    updateContact
+    updateContact,
+    deleteContact
+
 } = require('./contactController');
 
 router.get('/', getAllContacts);
 router.post('/', createContact);
 router.get('/:id', getContactsbyId);
 router.put('/:id', updateContact);
-// router.delete('/:id');
+router.delete('/:id', deleteContact);
 
 module.exports = router
