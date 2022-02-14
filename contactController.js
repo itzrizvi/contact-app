@@ -16,13 +16,15 @@ exports.createContact = (req, res) => {
 }
 
 exports.getContactsbyId = (req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
+    id = parseInt(id);
     let contact = contacts.getContactsbyId(id);
     res.json(contact);
 }
 
 exports.updateContact = (req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
+    id = parseInt(id);
 
     let { name, email, phone } = req.body;
 
@@ -36,7 +38,8 @@ exports.updateContact = (req, res) => {
 }
 
 exports.deleteContact = (req, res) => {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
+    id = parseInt(id);
 
     let contact = contacts.deleteContactById(id);
     res.json(contact);
