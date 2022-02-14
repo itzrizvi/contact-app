@@ -1,7 +1,7 @@
 // Required Packages
 const express = require("express");
 const morgan = require('morgan');
-const contactRoutes = require('/contactRoutes');
+const contactRoutes = require('./contactRoutes');
 
 
 
@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 app.use('/contacts', contactRoutes);
 
 app.get('*', (req, res) => {
-    res.send(<h1>Please Use The Correct Routes</h1>);
+    res.send('<h1>Please Use The Correct Routes</h1>');
 })
 
 
