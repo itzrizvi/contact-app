@@ -14,3 +14,30 @@ exports.createContact = (req, res) => {
 
     res.json(contact);
 }
+
+exports.getContactsbyId = (req, res) => {
+    let id = parseInt(req.params.id);
+    let contact = contacts.getContactsbyId(id);
+    res.json(contact);
+}
+
+exports.updateContact = (req, res) => {
+    let id = parseInt(req.params.id);
+
+    let { name, email, phone } = req.body;
+
+    let contact = contacts.updateContactById(id, {
+        name,
+        email,
+        phone
+    });
+
+    res.json(contact);
+}
+
+exports.deleteContact = (req, res) => {
+    let id = parseInt(req.params.id);
+
+    let contact = contacts.deleteContactById(id);
+    res.json(contact);
+}
