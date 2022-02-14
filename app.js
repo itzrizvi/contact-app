@@ -7,6 +7,8 @@ const contactRoutes = require('./contactRoutes');
 
 const app = express();
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true })); // for accepting all kind of data from client
+app.use(express.json());
 
 
 // Routes

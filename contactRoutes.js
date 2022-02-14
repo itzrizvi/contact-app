@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const {
-    getAllContacts
+    getAllContacts,
+    createContact
 } = require('./contactController');
 
 router.get('/', getAllContacts);
-// router.post('/');
+router.post('/', createContact);
 // router.get('/:id');
 // router.put('/:id');
 // router.delete('/:id');
